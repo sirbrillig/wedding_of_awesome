@@ -1,0 +1,91 @@
+/**
+
+//HTML5 Boilerplate + Normalize
+*= require "_vendor/normalize.css"
+*= require "_vendor/html5bp.css"
+
+//Grid
+require "_layout/grid"
+
+*/
+
+header {
+  height: 193px;
+  background-image: image-url('water_tiles.png');
+  background-repeat: repeat-x;
+  text-align: center;
+}
+
+.main {
+  margin: 0px;
+  height: 500px;
+  background-image: image-url('wedding_background.png');
+  background-repeat: no-repeat;
+}
+
+.title {
+  h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2.5em;
+    font-family: 'Herculanum', serif;
+    font-weight: normal;
+    margin-top: 45px;
+    width: 500px;
+    line-height: 1em;
+  }
+}
+
+$nav-link-size: 1.4em;
+$second-row-offset: 64px;
+
+@mixin nav-link-center {
+  position: absolute;
+  top: 50%;
+  margin-top: -1em;
+  left: 23px;
+  right: 23px;
+}
+
+@mixin main-nav-link($x, $y, $image:'forest.png', $offset: 0px) {
+  display: inline-block;
+  background-image: image-url($image);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 144px;
+  padding-right: 42px;
+  margin-right: -42px;
+  position: relative;
+  top: $offset;
+
+  a {
+    @include nav-link-center;
+    color: #fff;
+    text-decoration: none;
+    font-family: serif;
+    font-size: $nav-link-size;
+    font-weight: bold;
+    line-height: 1.1em;
+    width: 100px;
+  }
+}
+
+.where_when_link { @include main-nav-link(160px, 90px, 'wheat.png', $second-row-offset); }
+.lodging_link { @include main-nav-link(270px, 55px, 'forest.png'); }
+.registry_link { @include main-nav-link(370px, 118px, 'mountains.png', $second-row-offset); }
+.rsvp_link { @include main-nav-link(480px, 55px, 'brick.png'); }
+.faq_link { @include main-nav-link(580px, 118px, 'field.png', $second-row-offset); }
+.party_link { @include main-nav-link(685px, 45px, 'desert.png'); }
+.contact_link { @include main-nav-link(790px, 105px, 'forest.png', $second-row-offset); }
+
+.main_content {
+  margin-top: 100px;
+  width: 401px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p { 
+  text-align: center;
+}

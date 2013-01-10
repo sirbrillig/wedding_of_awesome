@@ -22,19 +22,22 @@
     = stylesheet_link_tag "site"
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-    %header
-      .where_when_link= link_to('Where & When', '/where')
-      .lodging_link= link_to('Lodging', '/lodging')
-      .registry_link= link_to('Gifts', '/gifts')
-      .rsvp_link= link_to('RSVP', '/rsvp')
-      .faq_link= link_to('FAQ', '/faq')
-      .party_link= link_to('Wedding Party', '/party')
-      .contact_link= link_to('Contact Us', '/contact')
-      .title
-        %h1 Payton and Meg's Wedding of Awesome
-    %div{:role => "main", :class => "main"}
-      %div.main_content= yield
-    %footer
+    .container
+      %header
+        .where_when_link= link_to('Where & When', '/where')
+        .lodging_link= link_to('Lodging', '/lodging')
+        .registry_link= link_to('Gifts', '/gifts')
+        .rsvp_link= link_to('RSVP', '/rsvp')
+        .faq_link= link_to('FAQ', '/faq')
+        .party_link= link_to('Wedding Party', '/party')
+        .contact_link= link_to('Contact Us', '/contact')
+        .title
+          %h1 Payton and Meg's Wedding of Awesome
+      %div{:role => "main", :class => "main"}
+        %div.main_content= yield
+      .background_tiles_left
+      .background_tiles_right
+      %footer
     
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
     :javascript

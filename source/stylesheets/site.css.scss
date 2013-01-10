@@ -9,18 +9,54 @@ require "_layout/grid"
 
 */
 
+body {
+  text-align: center;
+  background-image: image-url('background.png');
+  background-repeat: repeat-x repeat-y;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #fff;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+
 header {
   height: 193px;
-  background-image: image-url('water_tiles.png');
-  background-repeat: repeat-x;
+//  background-image: image-url('water_tiles.png');
+//  background-repeat: repeat-x;
   text-align: center;
+}
+
+.background_tiles_left {
+  margin-top: 190px;
+  height: 500px;
+  width: 100%;
+  background-image: image-url('tile_background_left.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  left: -50px;
+  z-index: 10000;
+}
+
+.background_tiles_right {
+  height: 500px;
+  width: 100%;
+  background-image: image-url('tile_background_right.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 190px;
+  left: 900px;
+  z-index: 10000;
 }
 
 .main {
   margin: 0px;
   height: 500px;
-  background-image: image-url('wedding_background.png');
-  background-repeat: no-repeat;
 }
 
 .title {
@@ -58,6 +94,7 @@ $second-row-offset: 64px;
   margin-right: -42px;
   position: relative;
   top: $offset;
+  left: -20px; // Not sure why I need this, but it centers the links.
 
   a {
     @include nav-link-center;
@@ -81,9 +118,6 @@ $second-row-offset: 64px;
 
 .main_content {
   margin-top: 100px;
-  width: 401px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 p { 

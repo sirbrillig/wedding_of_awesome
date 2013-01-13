@@ -9,15 +9,22 @@ require "_layout/grid"
 
 */
 
+html {
+  height: 100%;
+}
+
 body {
   text-align: center;
   background-image: image-url('background.png');
   background-repeat: repeat-x repeat-y;
+  height: 100%;
 }
 
 .container {
   width: 800px;
   margin: 0 auto;
+  min-height: 100%;
+  position: relative;
   text-align: left;
   background-color: #fff;
   border-left: 1px solid #000;
@@ -34,29 +41,39 @@ header {
 .background_tiles_left {
   margin-top: 190px;
   height: 500px;
-  width: 100%;
+  width: 400px;
   background-image: image-url('tile_background_left.png');
   background-repeat: no-repeat;
   position: absolute;
   top: 0px;
-  left: -50px;
-  z-index: 10000;
+  left: -250px;
 }
 
 .background_tiles_right {
-  height: 500px;
-  width: 100%;
-  background-image: image-url('tile_background_right.png');
-  background-repeat: no-repeat;
   position: absolute;
   top: 190px;
-  left: 900px;
-  z-index: 10000;
+  right: -100px;
+  height: 144px;
+  width: 144px;
+  background-image: image-url('tile_background_right.png');
+  background-repeat: no-repeat;
 }
 
 .main {
   margin: 0px;
-  height: 500px;
+  height: 100%;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background-color: #436241;
 }
 
 .title {
@@ -117,7 +134,9 @@ $second-row-offset: 64px;
 .contact_link { @include main-nav-link(790px, 105px, 'forest.png', $second-row-offset); }
 
 .main_content {
+  margin: 0px auto;
   margin-top: 100px;
+  width: 500px;
 }
 
 p { 

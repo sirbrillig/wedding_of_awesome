@@ -34,7 +34,9 @@
         .title
           %h1 Payton and Meg's Wedding of Awesome
       %div{:role => "main", :class => "main"}
-        %div.main_content= yield
+        %div.main_content
+          = yield
+          = link_to(image_tag('sheep_tile.png'), '/')
       .background_tiles_left
       .background_tiles_right
       %footer

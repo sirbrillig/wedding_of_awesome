@@ -198,3 +198,17 @@ $second-row-offset: 64px;
     padding: 0px;
   }
 }
+
+.party_person {
+  text-align: left;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+
+  span {
+    display: block;
+  }
+}

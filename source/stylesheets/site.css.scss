@@ -134,6 +134,11 @@ $second-row-offset: 64px;
 .party_link { @include main-nav-link(685px, 45px, 'desert.png'); }
 .contact_link { @include main-nav-link(790px, 105px, 'forest.png', $second-row-offset); }
 
+.current a {
+  color: #000;
+  text-shadow: none;
+}
+
 .sheep {
   margin-top: 50px;
 }
@@ -143,7 +148,7 @@ $second-row-offset: 64px;
   margin-top: 100px;
   width: 500px;
 
-  p { 
+  p, li { 
     text-align: center;
     line-height: 26px;
     margin-bottom: 20px;
@@ -157,5 +162,11 @@ $second-row-offset: 64px;
 
   a, a:link, a:visited {
     color: $link-color;
+  }
+
+  li {
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
   }
 }

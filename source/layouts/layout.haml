@@ -25,13 +25,13 @@
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     .container
       %header
-        .where_when_link= link_to('Where & When', '/where')
-        .lodging_link= link_to('Lodging', '/lodging')
-        .registry_link= link_to('Gifts', '/gifts')
-        .rsvp_link= link_to('RSVP', '/rsvp')
-        .faq_link= link_to('FAQ', '/faq')
-        .party_link= link_to('Wedding Party', '/party')
-        .contact_link= link_to('Contact Us', '/contact')
+        .where_when_link{nav_active('where')}= link_to('Where & When', '/where')
+        .lodging_link{nav_active('lodging')}= link_to('Travel & Lodging', '/lodging')
+        .registry_link{nav_active('gifts')}= link_to('Gifts', '/gifts')
+        .rsvp_link{nav_active('rsvp')}= link_to('RSVP', '/rsvp')
+        .faq_link{nav_active('faq')}= link_to('FAQ', '/faq')
+        .party_link{nav_active('party')}= link_to('Wedding Party', '/party')
+        .contact_link{nav_active('contact')}= link_to('Contact Us', '/contact')
         .title
           %h1 Payton and Meg's Wedding of Awesome
       %div{:role => "main", :class => "main"}

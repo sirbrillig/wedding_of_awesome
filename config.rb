@@ -53,6 +53,13 @@ activate :livereload
 #   end
 # end
 
+helpers do
+  def nav_active(page)
+    page = /#{page}/ if page.is_a? String
+    request.path =~ page ? {class: 'current'} : {}
+  end
+end
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'

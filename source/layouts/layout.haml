@@ -37,7 +37,8 @@
       %div{:role => "main", :class => "main"}
         %div.main_content
           = yield
-          = link_to(image_tag('sheep_tile.png'), '/')
+          .sheep
+            = link_to(image_tag('sheep_tile.png'), '/')
       .background_tiles_left
       .background_tiles_right
       %footer

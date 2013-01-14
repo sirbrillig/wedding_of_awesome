@@ -12,22 +12,29 @@
 
 </div>
 
-Name: Payton Swick
-Alias: The Dude Gettin’ Married
-Weapon of Choice: Lightsaber (blue)
-Favorite Game: Dungeons and Dragons
-Superpower: Storyteller, level 15.
-Fears: Balrogs
-Loves: Kale. Megses. Starlight. Snow.
+<div class="party_person">
 
-Name: Atrus the Dog
-Alias: Master of Revelry
-Weapon of Choice: Overzealous Pitbull Tail
-Favorite Game: Chase me!
-Superpower: Stomach of steel
-Fears: Not really.
-Loves: Oh yes, most definitely.
+<span><em>Name:</em> Payton Swick</span>
+<span><em>Alias:</em> The Dude Gettin’ Married</span>
+<span><em>Weapon of Choice:</em> Lightsaber (blue)</span>
+<span><em>Favorite Game:</em> Dungeons and Dragons</span>
+<span><em>Superpower:</em> Storyteller, level 15.</span>
+<span><em>Fears:</em> Balrogs</span>
+<span><em>Loves:</em> Kale. Megses. Starlight. Snow.</span>
 
+</div>
+
+<div class="party_person">
+
+<span><em>Name:</em> Atrus the Dog</span>
+<span><em>Alias:</em> Master of Revelry</span>
+<span><em>Weapon of Choice:</em> Overzealous Pitbull Tail</span>
+<span><em>Favorite Game:</em> Chase me!</span>
+<span><em>Superpower:</em> Stomach of steel</span>
+<span><em>Fears:</em> Not really.</span>
+<span><em>Loves:</em> Oh yes, most definitely.</span>
+
+</div>
 
 Name: Abigail Winter-Lewis
 

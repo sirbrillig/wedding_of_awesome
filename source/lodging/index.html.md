@@ -1,8 +1,18 @@
-**Travel & Lodging**
+# Travel & Lodging
 
-*Driving?* Take a look at our [Where & When](/where/) page.
+## Getting There
 
-*Flying?* The closest airport is the Burlington International Airport, about an hour drive north of Salisbury. There are several car rental options from the airport (Avis, National, Budget). There will be lots of people driving up from Massachusetts, so if you are flying into Logan Airport in Boston and need to hitch a ride, please [let us know](/contact) so we can get you in touch with someone who has a vehicle.
+The address is [*1945 Smead Rd, Salisbury, VT 05769*](http://goo.gl/maps/3tt60). You can park your vehicle anywhere along the road by the house.
+
+*Flying:* The closest airport is the Burlington International Airport, about an hour drive north of Salisbury. There are several car rental options from the airport (Avis, National, Budget). There will be lots of people driving up from Massachusetts, so if you are flying into Logan Airport in Boston and need to hitch a ride, please [let us know](/contact) so we can get you in touch with someone who has a vehicle.
+
+*Directions from Burlington:* Drive south on Route 7 into the town of Middlebury. In the center of Middlebury there’s a traffic circle. Go left around the circle on Court Square, then right to continue on Route 7 south. After 6.8 miles, turn left on Route 53 (Lake Dunmore Road) and then the first right onto Smead Road. Follow Smead Road for 1.9 miles and Kingsley Mill will be on your left. 
+
+*Directions from Massachusetts:* Take I-93 North into New Hampshire. Merge onto I-89 North. Drive for 83.7 miles to Exit 3 (Bethel, VT). Get off on Exit 3, bear right onto VT-107 West and follow it for 13 miles. Turn right onto VT-100 North and travel for about 7 miles. Turn left onto VT-73 West (Brandon Mountain Road) and follow for 14.1 miles. Turn right onto Route 53 (North Street). Bear left onto Fern Lake Road, then right on Shackett Road. Bear right onto Maple Street, which becomes Smead Road. Bear right to stay on Smead Road and the house is on the right.
+
+<div class="end_of_block"></div>
+
+## Staying There
 
 *Where should you stay? Well, there are several options.*
 
@@ -15,6 +25,11 @@
 - [Downtown Middlebury B&B - A Room in the Village](http://www.aroominthevillage.com/)
 
 *Option the Third:* There are also several vacation rental homes within the Lake Dunmore area if you’d like to stay with a group. Great websites for finding a vacation rental are [AirBnB](www.airbnb.com), [VactionRentals.com](www.vacationrentals.com), and [VRBO](www.vrbo.com).
+
+
+<div class="end_of_block"></div>
+
+## Activities
 
 *What else is there to do in the area if we arrive early or have extra time?*
 

@@ -1,0 +1,56 @@
+# FAQ 
+
+### When is it again?!
+Saturday, August 17th, 2013 at 5pm. Be there, or be square.
+
+### What time should I arrive?
+You can probably figure this one out on your own. Arrive in plenty of time to do whatever you gotta do to prepare yourself for the impending ceremonial proceedings. Maybe 20-30 minutes?
+
+### Is the ceremony indoors or outdoors? 
+The ceremony will be outdoors, rain or shine! We will do a silly dance to the weather gods asking for clear skies, but we can’t guarantee it won’t rain. The ceremony will be BYOU (Bring Your Own Umbrella) and BYOG (Bring Your Own Galoshes), so please keep an eye on the weather report and dress accordingly. The reception will be in a cozy, dry, shady tent, so you don’t have to worry about eating soggy cake.
+
+### Speaking of weather, what the weather usually like in Vermont in August?
+Vermont has gorgeous summers! Average high temps in Salisbury are in the upper 70s and at nighttime temps dip into the mid 50s. Might be a good idea to bring along a light sweater or jacket if you plan on staying late into the night.
+
+### What should I wear?
+Keep in mind when planning your attire that all of the day’s events will be held outdoors on a grassy lawn. Ladies, that means you will be better off leaving your spike heels at home and having more comfortable footwear. We encourage you to not be restricted to wearing black as this will be a colorful, warm, festive wedding celebration. Here’s some examples if you would like some guidance:
+
+### Does your wedding have a theme?
+Marriage! Food! Cake! Games! Joy!
+
+### Can I take a zillion pictures for Facebook, send text messages to my friends, or play Angry Birds if I get bored during your wedding?
+As a computer nerd who spends the majority of his life plugged into a laptop and smartphone, even Payton thinks it's critical to take a few moments to be truly present. A wedding ceremony is exactly the kind of fleeting, important moment when it's especially valuable to really be present. Smell the air, look around, feel the texture of the world around you! We want you to watch, clap, smile, cry and really listen and remember - not from the photos you downloaded onto your computer, but from your own memory. We will be having photographs taken that we will happily share with you afterwards!
+
+
+### Can I bring a date?
+In the spirit of keeping our intimate wedding guest list to only our nearest and dearest, we would kindly ask that you bring only the number of people listed on your invitation. That being said, if there is someone special in your life that we aren’t aware of please let us know and we’d be happy to extend an invitation. Because if they like you they’re probably awesome and we want to meet them!
+
+### Can I bring my kids?
+Our wedding festivities will be for adults only. Atrus the dog will be in attendance if you suddenly become overwhelmed with the desire to squish something cute.
+
+### Are you going to feed me?
+Absolutely! We will be having a vegan family-style dinner after the ceremony. 
+
+### I have a food allergy or dietary restriction. What should I do?
+Please let us know as soon as possible. A chef friend of ours is developing our menu, so if there are any dietary restrictions he can adjust the menu accordingly.
+
+### Do I have to dance? 
+No. We are opting not to have any dancing at our reception. In true Payton and Meg style, there will be epic board gaming instead! We will have a big stash of games available of all different difficulty levels and genres (word games, strategy games, card games, Euro games, etc.). 
+
+### Will there be a first dance/bouquet toss/garter toss/cake smashing? 
+No.
+
+### What if I want to make a toast to your combined awesomeness? 
+We will be having a small number of toasts during dinner sometime. If you really feel the urge to give a toast, please let us know ahead of time. Please don’t be offended if we say no.
+
+### When is the RSVP deadline?
+Please let us know by August 1st whether you’ll be able to make it or not. 
+
+### Is there transportation being provided between reception and hotels?
+We will not be providing any shuttle service between the wedding venue and hotels. You’re welcome to stay at the venue as long as you need in order to feel safe driving.
+
+### Will last names be changing after the wedding?
+We’ve had our names for so long - we’ve grown kind of attached to them! We have decided to keep our last names. 
+
+### I have a question not answered here; how do I contact you?
+You can email or call us if you have our info. If not, [click here to get in touch with us directly](/contact). Or send a carrier pigeon.

@@ -12,6 +12,8 @@
 
 </div>
 
+---
+
 <div class="party_person">
 
 <span><em>Name:</em> Payton Swick</span>
@@ -24,6 +26,8 @@
 
 </div>
 
+---
+
 <div class="party_person">
 
 <span><em>Name:</em> Atrus the Dog</span>
@@ -35,6 +39,8 @@
 <span><em>Loves:</em> Oh yes, most definitely.</span>
 
 </div>
+
+---
 
 Name: Abigail Winter-Lewis
 

@@ -1,6 +1,6 @@
 # Where and When
 
-## Timing
+## When!
 
 We are getting married on *Saturday, August 17th, 2013*.
 
@@ -10,13 +10,15 @@ Delicious & Fun Celebratory Stuff will begin shortly thereafter and will wrap up
 
 <div class="end_of_block"></div>
 
-## The Place
+## Where!
 
-All of the wedding festivities will be taking place at *Kingsley Mill Manor*, a lovely old farmhouse in Salisbury, Vermont, a little over an hour’s drive from Burlington. The address is [*1945 Smead Rd, Salisbury, VT 05769*](http://goo.gl/maps/3tt60). You can park your vehicle anywhere along the road by the house.
+All of the wedding festivities will be taking place at *Kingsley Mill Manor*, a lovely old farmhouse in Salisbury, Vermont, a little over an hour’s drive from Burlington. 
+
+The address is [*1945 Smead Rd, Salisbury, VT 05769*](http://goo.gl/maps/3tt60). You can park your vehicle anywhere along the road by the house.
 
 <div class="end_of_block"></div>
 
-## Travel
+## How!
 
 Take a look at our [Travel and Lodging](/lodging) page.
 

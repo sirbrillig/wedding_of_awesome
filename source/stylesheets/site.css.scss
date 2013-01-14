@@ -83,7 +83,7 @@ footer {
     font-size: 2.5em;
     font-family: 'Lobster', serif;
     font-weight: normal;
-    margin-top: 45px;
+    margin-top: 55px;
     width: 400px;
     line-height: 1em;
     border-bottom: 1px solid #888;
@@ -197,6 +197,12 @@ $second-row-offset: 64px;
     margin: 0px;
     padding: 0px;
   }
+
+  hr {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 
 .party_person {
@@ -205,8 +211,6 @@ $second-row-offset: 64px;
   font-size: 16px;
   line-height: 25px;
   margin-bottom: 20px;
-  border-top: 1px solid #999;
-  border-bottom: 1px solid #999;
 
   span {
     display: block;

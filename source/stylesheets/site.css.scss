@@ -9,6 +9,8 @@ require "_layout/grid"
 
 */
 
+$link-color: #114f57;
+
 html {
   height: 100%;
 }
@@ -26,8 +28,7 @@ body {
   position: relative;
   text-align: left;
   background-color: #fff;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000;
+  box-shadow: 1px 1px 10px 1px #000 inset;
 }
 
 header {
@@ -133,17 +134,28 @@ $second-row-offset: 64px;
 .party_link { @include main-nav-link(685px, 45px, 'desert.png'); }
 .contact_link { @include main-nav-link(790px, 105px, 'forest.png', $second-row-offset); }
 
-.main_content {
-  margin: 0px auto;
-  margin-top: 100px;
-  width: 500px;
-  font-family: 'Merriweather', serif;
-}
-
 .sheep {
   margin-top: 50px;
 }
 
-p { 
-  text-align: center;
+.main_content {
+  margin: 0px auto;
+  margin-top: 100px;
+  width: 500px;
+
+  p { 
+    text-align: center;
+    line-height: 26px;
+    margin-bottom: 20px;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+  }
+
+  em {
+    font-weight: bold;
+  }
+
+  a, a:link, a:visited {
+    color: $link-color;
+  }
 }

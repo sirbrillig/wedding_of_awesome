@@ -192,7 +192,15 @@ $second-row-offset: 64px;
     color: $link-color;
   }
 
+  ul {
+    text-align: left;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+
   li {
+    font-size: 14px;
     text-align: left;
     margin: 0px;
     padding: 0px;

@@ -58,6 +58,18 @@ helpers do
     page = /#{page}/ if page.is_a? String
     request.path =~ page ? {class: 'current'} : {}
   end
+
+  def make_anchor(title)
+    title.gsub(/\s+/, '_').gsub(/[(,?!\'\":.)]/, '').downcase
+  end
+
+  def faq_link(title)
+    link_to(title, "#"+make_anchor(title))
+  end
+
+  def faq(title)
+    "<a id='#{make_anchor(title)}'></a>#{title}"
+  end
 end
 
 set :css_dir, 'stylesheets'

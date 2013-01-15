@@ -33,9 +33,9 @@ The address is [*1945 Smead Rd, Salisbury, VT 05769*](http://goo.gl/maps/3tt60).
 
 *What else is there to do in the area if we arrive early or have extra time?*
 
-- Farmer’s market on Saturday morning at the Marble Works in Middlebury. <http://www.middleburyfarmersmarket.org/>
-- Stone Leaf Teahouse (in the Marble Works) - A great teahouse with high quality tea - highly recommended! <http://www.stoneleaftea.com/>
-- The Middlebury Natural Foods Co-op has a great selection of grocery and prepared foods.  <http://middleburycoop.com/coop/index.php>
-- Sabai Sabai Thai Restaurant has excellent Thai and Japanese food. <http://sabaisabaithai.com/>
-- American Flatbread has excellent wood-fired pizza and beer (in the Marble Works). <http://americanflatbread.com/restaurants/middlebury-vt/>
-- The VAST hiking trails run through the Middlebury/Lake Dunmore area. You can access the trails right from Kingsley Mill Manor.
+- [Farmer’s market](http://www.middleburyfarmersmarket.org/) on Saturday morning at the Marble Works in Middlebury. 
+- [Stone Leaf Teahouse](http://www.stoneleaftea.com/) (in the Marble Works) - A great teahouse with high quality tea - highly recommended! 
+- [The Middlebury Natural Foods Co-op](http://middleburycoop.com/coop/index.php) has a great selection of grocery and prepared foods.
+- [Sabai Sabai Thai Restaurant](http://sabaisabaithai.com/) has excellent Thai and Japanese food. 
+- [American Flatbread](http://americanflatbread.com/restaurants/middlebury-vt/) has excellent wood-fired pizza and beer (in the Marble Works). 
+- The [VAST hiking trails](http://www.addisoncounty.com/pages/visit.asp?content=hiking) run through the Middlebury/Lake Dunmore area. You can access the trails right from Kingsley Mill Manor.

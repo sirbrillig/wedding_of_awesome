@@ -1,5 +1,6 @@
 desc "build website"
 task :build do
+  system "rm -rf build/*"
   system "middleman build"
 end
 

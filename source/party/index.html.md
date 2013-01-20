@@ -41,15 +41,3 @@
 </div>
 
 ---
-
-Name: Abigail Winter-Lewis
-
-Name: Kat Winter-Lewis
-
-Name: Jessica Hearn
-
-Name: Matthew Magnuson
-
-Name: Lauren Swick Jordan
-
-Name: Theodore Winter-Lewis

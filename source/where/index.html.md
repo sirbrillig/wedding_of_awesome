@@ -24,4 +24,4 @@ Take a look at our [Travel and Lodging](/lodging) page.
 
 **Please be aware that there is no cell phone reception at our wedding location.** 
 
-If you need to get in touch with us before the wedding (*“Help! We’re on our way, but we’re being chased by ogres!”*), you can call the house phone at Kingsley Mill. The number there is *(802) 352-4562*. There is Wi-Fi in the house, so we should be also be accessible via email.
+If you need to get in touch with us before the wedding (*“Help! We’re on our way, but we’re being chased by ogres!”*), you can call the house phone at Kingsley Mill. The number there is *(802) 352-4562*. There is Wi-Fi in the house, so we should also be accessible via email.

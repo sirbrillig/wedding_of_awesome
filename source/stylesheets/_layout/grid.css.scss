@@ -3,7 +3,7 @@
 $total-columns  : 3;
 $column-width   : 4em;
 $gutter-width   : .5em;
-$grid-padding   : .5em;
+$grid-padding   : 0em;
 
 $link-color: #114f57;
 $nav-link-size: 1.4em;
@@ -31,7 +31,7 @@ $fifth-row-offset: -44px;
   margin-right: -42px;
   position: relative;
   top: $offset-from-top;
-  left: -20px; // Not sure why I need this, but it centers the links.
+  left: -6px;
 
   a {
     @include nav-link-center;
@@ -220,6 +220,7 @@ body {
     }
 
     .background_tiles_left {
+      display: block;
       margin-top: 190px;
       height: 500px;
       width: 400px;
@@ -231,6 +232,7 @@ body {
     }
 
     .background_tiles_right {
+      display: block;
       position: absolute;
       top: 190px;
       right: -100px;
@@ -248,7 +250,7 @@ body {
       @include reset-columns;
       h1 {
         font-size: 2.5em;
-        margin-top: 55px;
+        margin-top: 65px;
         width: 400px;
         border-bottom: 1px solid #888;
       }
@@ -280,14 +282,15 @@ body {
       }
 
       h2 {
+        font-size: 1.6em;
       }
 
       h3 {
-        font-size: 18px;
+        font-size: 1.3em;
       }
 
       p, li { 
-        font-size: 1.3em;
+        font-size: 1.0em;
       }
     }
   }

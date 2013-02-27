@@ -41,3 +41,17 @@
 </div>
 
 ---
+
+<div class="party_person">
+
+<span><em>Name:</em> Abigail Winter-Lewis</span>
+<span><em>Alias:</em> O'Hara/Swick Super Fan</span>
+<span><em>Weapon of Choice:</em> Righteous Indignation</span>
+<span><em>Favorite Game:</em> Cards Against Humanity</span>
+<span><em>Superpower:</em> I make People</span>
+<span><em>Fears:</em> Lost opportunities for kindness</span>
+<span><em>Loves:</em> Babies, Embroidery, Indian Food</span>
+
+</div>
+
+---

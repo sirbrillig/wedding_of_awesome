@@ -59,7 +59,7 @@ body {
   background-color: #fff;
   background-image: image-url('cardboard_flat.png');
 
-  @include at-breakpoint(290px 5) { // eg: iPhone 4
+  @include at-breakpoint(290px 5) { // Medium display
     @include container();
 //    @include susy-grid-background;
 
@@ -201,7 +201,7 @@ body {
     }
   }
 
-  @include at-breakpoint(30em 14) { // Wide display
+  @include at-breakpoint(800px 14) { // Wide display
     @include container();
 //    @include susy-grid-background;
 

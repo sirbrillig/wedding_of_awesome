@@ -1,4 +1,4 @@
-# Travel & Lodging
+<h1 class="section-title"> Travel & Lodging</h1>
 
 ## Getting There
 

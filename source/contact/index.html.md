@@ -1,4 +1,4 @@
-# Contact
+<h1 class="section-title">Contact</h1>
 
 Please send us an email if you have any questions, but check out the [FAQ](/faq) first to make sure we haven't answered it already.
 

@@ -2,8 +2,8 @@
 
 $total-columns  : 3;
 $column-width   : 4em;
-$gutter-width   : 1em;
-$grid-padding   : .1em;
+$gutter-width   : .5em;
+$grid-padding   : .5em;
 
 $link-color: #114f57;
 $nav-link-size: 1.4em;
@@ -20,18 +20,17 @@ $fifth-row-offset: -44px;
   right: 23px;
 }
 
-// Note: x and y are deprecated.
-@mixin main-nav-link($x, $y, $image:'forest.png', $offset: 0px) {
+@mixin main-nav-link($image:'forest.png', $offset-from-top: 0px) {
   display: inline-block;
   text-align: center;
   background-image: image-url($image);
   background-repeat: no-repeat;
   width: 101px;
-  height: 144px;
+  height: 130px;
   padding-right: 42px;
   margin-right: -42px;
   position: relative;
-  top: $offset;
+  top: $offset-from-top;
   left: -20px; // Not sure why I need this, but it centers the links.
 
   a {
@@ -47,62 +46,64 @@ $fifth-row-offset: -44px;
   }
 }
 
+body {
+  text-align: center;
+  background-color: #b3a78f;
+  height: 100%;
+}
 
 .container {
   @include container();
-  @include susy-grid-background;
+//  @include susy-grid-background;
 
-  @include at-breakpoint(290px 5) {
+  background-color: #fff;
+  background-image: image-url('cardboard_flat.png');
+
+  @include at-breakpoint(290px 5) { // eg: iPhone 4
     @include container();
-    @include susy-grid-background;
+//    @include susy-grid-background;
 
     .background_tiles_left { display: none; }
     .background_tiles_right { display: none; }
 
-    header {
-      height: 193px;
-    }
-
     .main {
       margin: 0px;
       height: 100%;
-      padding-bottom: 50px;
-      margin-top: 130px;
       text-align: center;
     }
 
-    footer {
-      width: 100%;
-      height: 50px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      text-align: center;
+    .main-nav-links {
+      @include span-columns(2, 5);
+      @include pull(0.2);
     }
 
     .title {
+      @include span-columns(3 omega, 5);
+
       h1 {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
-        font-size: 2.5em;
+        font-size: 1.5em;
         font-family: 'Lobster', serif;
         font-weight: normal;
-        margin-top: 55px;
-        width: 400px;
         line-height: 1em;
+        padding: 0px;
         padding-bottom: 20px;
-        border-bottom: 1px solid #888;
       }
     }
 
-    .where_when_link { @include main-nav-link(160px, 90px, 'wheat.png', $second-row-offset); }
-    .lodging_link { @include main-nav-link(270px, 55px, 'forest.png'); }
-    .registry_link { @include main-nav-link(370px, 118px, 'mountains.png', $second-row-offset); }
-    .rsvp_link { @include main-nav-link(480px, 55px, 'brick.png', $fourth-row-offset); }
-    .faq_link { @include main-nav-link(580px, 118px, 'field.png', $third-row-offset); }
-    .party_link { @include main-nav-link(685px, 45px, 'desert.png', $fourth-row-offset); }
-    .contact_link { @include main-nav-link(790px, 105px, 'forest.png', $fifth-row-offset); left: 84px; }
+    .where_when_link { @include main-nav-link('wheat.png') }
+    .lodging_link { @include main-nav-link('forest.png') }
+    .registry_link { @include main-nav-link('mountains.png') }
+    .rsvp_link { @include main-nav-link('brick.png') }
+    .faq_link { @include main-nav-link('field.png') }
+    .party_link { @include main-nav-link('desert.png') }
+    .contact_link { @include main-nav-link('forest.png') }
+
+    .nav-link {
+      display: block;
+    }
 
     .current a {
       color: #000;
@@ -114,12 +115,11 @@ $fifth-row-offset: -44px;
     }
 
     .main_content {
+      @include span-columns(3 omega, 5);
       margin: 0px auto;
-      margin-top: 100px;
-      width: 500px;
 
-      h1 {
-        font-family: 'Oswald', serif;
+      h1.section-title {
+        font-size: 1em;
       }
 
       h2 {
@@ -127,6 +127,7 @@ $fifth-row-offset: -44px;
         margin-bottom: 5px;
         padding: 0px;
         font-family: 'Oswald', serif;
+        font-size: 1.2em;
         text-align: left;
       }
 
@@ -135,8 +136,12 @@ $fifth-row-offset: -44px;
         margin-bottom: 5px;
         padding: 0px;
         font-family: 'Oswald', serif;
-        font-size: 18px;
+        font-size: 1.1em;
         text-align: left;
+      }
+
+      .welcome p {
+        text-align: center;
       }
 
       p, li { 
@@ -146,7 +151,7 @@ $fifth-row-offset: -44px;
         line-height: 26px;
         margin-bottom: 20px;
         font-family: 'Merriweather', serif;
-        font-size: 16px;
+        font-size: 0.9em;
       }
 
       .end_of_block {
@@ -196,9 +201,16 @@ $fifth-row-offset: -44px;
     }
   }
 
-  @include at-breakpoint(30em 14) {
+  @include at-breakpoint(30em 14) { // Wide display
     @include container();
-    @include susy-grid-background;
+//    @include susy-grid-background;
+
+    width: 800px;
+    margin: 0 auto;
+    min-height: 100%;
+    position: relative;
+    text-align: left;
+    box-shadow: 1px 1px 10px 1px #000;
 
     header {
       height: 193px;
@@ -229,134 +241,53 @@ $fifth-row-offset: -44px;
     }
 
     .main {
-      margin: 0px;
-      height: 100%;
-      padding-bottom: 50px;
       margin-top: 130px;
-      text-align: center;
-    }
-
-    footer {
-      width: 100%;
-      height: 50px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      text-align: center;
     }
 
     .title {
+      @include reset-columns;
       h1 {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
         font-size: 2.5em;
-        font-family: 'Lobster', serif;
-        font-weight: normal;
         margin-top: 55px;
         width: 400px;
-        line-height: 1em;
-        padding-bottom: 20px;
         border-bottom: 1px solid #888;
       }
     }
 
-    .where_when_link { @include main-nav-link(160px, 90px, 'wheat.png', $second-row-offset); }
-    .lodging_link { @include main-nav-link(270px, 55px, 'forest.png'); }
-    .registry_link { @include main-nav-link(370px, 118px, 'mountains.png', $second-row-offset); }
-    .rsvp_link { @include main-nav-link(480px, 55px, 'brick.png'); }
-    .faq_link { @include main-nav-link(580px, 118px, 'field.png', $second-row-offset); }
-    .party_link { @include main-nav-link(685px, 45px, 'desert.png'); }
-    .contact_link { @include main-nav-link(790px, 105px, 'forest.png', $second-row-offset); }
-
-    .current a {
-      color: #000;
-      text-shadow: none;
+    .main-nav-links {
+      @include reset-columns;
     }
 
-    .sheep {
-      margin-top: 50px;
+    .where_when_link { @include main-nav-link('wheat.png', $second-row-offset); }
+    .lodging_link { @include main-nav-link('forest.png'); }
+    .registry_link { @include main-nav-link('mountains.png', $second-row-offset); }
+    .rsvp_link { @include main-nav-link('brick.png'); }
+    .faq_link { @include main-nav-link('field.png', $second-row-offset); }
+    .party_link { @include main-nav-link('desert.png'); }
+    .contact_link { @include main-nav-link('forest.png', $second-row-offset); }
+
+    .nav-link {
+      margin-left: auto;
     }
 
     .main_content {
-      margin: 0px auto;
+      @include reset-columns;
       margin-top: 100px;
       width: 500px;
 
-      h1 {
-        font-family: 'Oswald', serif;
+      h1.section-title {
+        font-size: 2em;
       }
 
       h2 {
-        margin: 0px;
-        margin-bottom: 5px;
-        padding: 0px;
-        font-family: 'Oswald', serif;
-        text-align: left;
       }
 
       h3 {
-        margin: 0px;
-        margin-bottom: 5px;
-        padding: 0px;
-        font-family: 'Oswald', serif;
         font-size: 18px;
-        text-align: left;
       }
 
       p, li { 
-        margin: 0px;
-        padding: 0px;
-        text-align: left;
-        line-height: 26px;
-        margin-bottom: 20px;
-        font-family: 'Merriweather', serif;
-        font-size: 16px;
-      }
-
-      .end_of_block {
-        border-bottom: 1px solid #999;
-        margin-bottom: 10px;
-      }
-
-      em {
-        font-weight: bold;
-      }
-
-      a, a:link, a:visited {
-        color: $link-color;
-      }
-
-      ul {
-        text-align: left;
-        margin: 0px;
-        padding: 0px;
-        margin-bottom: 10px;
-      }
-
-      li {
-        font-size: 14px;
-        text-align: left;
-        margin: 0px;
-        padding: 0px;
-      }
-
-      hr {
-        width: 200px;
-        margin: 0 auto;
-        margin-bottom: 20px;
-      }
-    }
-
-    .party_person {
-      text-align: left;
-      font-family: 'Merriweather', serif;
-      font-size: 16px;
-      line-height: 25px;
-      margin-bottom: 20px;
-
-      span {
-        display: block;
+        font-size: 1.3em;
       }
     }
   }

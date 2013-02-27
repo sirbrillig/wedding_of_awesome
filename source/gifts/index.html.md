@@ -1,4 +1,4 @@
-# Gifts
+<h1 class="section-title">Gifts</h1>
 
 Seriously, your presence, love and support on our wedding day is gift enough! Please do not feel any obligation to purchase a gift for us. If you are still moved to give us something tangible though, here are some suggestions:
 

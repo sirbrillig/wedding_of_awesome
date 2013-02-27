@@ -1,4 +1,4 @@
-# Wedding Party 
+<h1 class="section-title"> Wedding Party </h1>
 
 <div class="party_person">
 

@@ -1,4 +1,4 @@
-# Where & When
+<h1 class="section-title"> Where & When</h1>
 
 ## When!
 

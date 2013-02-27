@@ -20,6 +20,17 @@ $fifth-row-offset: -44px;
   right: 23px;
 }
 
+@mixin nav-link-small {
+  width: 108px;
+  height: 98px;
+  a {
+    font-size: 1em;
+    width: 80px;
+    left: 15px;
+    right: 15px;
+  }
+}
+
 @mixin main-nav-link($image:'forest.png', $offset-from-top: 0px) {
   display: inline-block;
   text-align: center;
@@ -59,7 +70,7 @@ body {
   background-color: #fff;
   background-image: image-url('cardboard_flat.png');
 
-  @include at-breakpoint(290px 5) { // Medium display
+  @include at-breakpoint(290px 6) { // Medium display
     @include container();
 //    @include susy-grid-background;
 
@@ -73,12 +84,12 @@ body {
     }
 
     .main-nav-links {
-      @include span-columns(2, 5);
-      @include pull(0.2);
+      @include span-columns(2, 6);
+      @include pull(0.3);
     }
 
     .title {
-      @include span-columns(3 omega, 5);
+      @include span-columns(4 omega, 6);
 
       h1 {
         text-align: center;
@@ -93,13 +104,13 @@ body {
       }
     }
 
-    .where_when_link { @include main-nav-link('wheat.png') }
-    .lodging_link { @include main-nav-link('forest.png') }
-    .registry_link { @include main-nav-link('mountains.png') }
-    .rsvp_link { @include main-nav-link('brick.png') }
-    .faq_link { @include main-nav-link('field.png') }
-    .party_link { @include main-nav-link('desert.png') }
-    .contact_link { @include main-nav-link('forest.png') }
+    .where_when_link { @include main-nav-link('wheat_small.png'); @include nav-link-small; }
+    .lodging_link { @include main-nav-link('forest_small.png'); @include nav-link-small; }
+    .registry_link { @include main-nav-link('mountains_small.png'); @include nav-link-small; }
+    .rsvp_link { @include main-nav-link('brick_small.png'); @include nav-link-small; }
+    .faq_link { @include main-nav-link('field_small.png'); @include nav-link-small; }
+    .party_link { @include main-nav-link('desert_small.png'); @include nav-link-small; }
+    .contact_link { @include main-nav-link('forest_small.png'); @include nav-link-small; }
 
     .nav-link {
       display: block;
@@ -115,7 +126,7 @@ body {
     }
 
     .main_content {
-      @include span-columns(3 omega, 5);
+      @include span-columns(4 omega, 6);
       margin: 0px auto;
 
       h1.section-title {

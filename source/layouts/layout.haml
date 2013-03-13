@@ -23,7 +23,7 @@
     = stylesheet_link_tag "site"
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-    .container
+    .container{:role => "page"}
       %header
         .main-nav-links
           .nav-link.where_when_link{nav_active('where')}= link_to('Where & When', '/where')
@@ -48,7 +48,11 @@
       window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
     = javascript_include_tag "site"
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    -# FIXME: disable ajax page loads. this does not work.
+    :javascript
+      $(document).bind("mobileinit", function () {
+          $.mobile.ajaxEnabled = false;
+      });
     <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
     
     :javascript

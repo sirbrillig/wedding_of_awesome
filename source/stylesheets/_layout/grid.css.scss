@@ -30,7 +30,7 @@ $fifth-row-offset: -44px;
 @mixin nav-link-small {
   width: 108px;
   height: 98px;
-  a {
+  a, a:link, a:visited {
     font-size: 1em;
     width: 80px;
     left: 15px;
@@ -50,7 +50,7 @@ $fifth-row-offset: -44px;
   position: relative;
   top: $offset-from-top;
 
-  a {
+  a, a:link, a:visited {
     @include nav-link-center;
     color: #fff;
     text-decoration: none;
@@ -61,20 +61,28 @@ $fifth-row-offset: -44px;
     width: 100px;
     text-shadow: 2px 2px #000;
   }
+
+}
+
+.current {
+  a, a:link, a:visited {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
 }
 
 body {
   text-align: center;
-  background-color: #b3a78f;
   height: 100%;
+}
+
+.ui-body-c, .ui-overlay-c {
+  background-image: image-url('cardboard_flat.png') !important;
 }
 
 .container {
   @include container();
 //  @include susy-grid-background;
-
-  background-color: #fff;
-  background-image: image-url('cardboard_flat.png');
 
   // ############# iPhone/iPad Breakpoint #############
   @include at-breakpoint($smartphone) {
@@ -123,9 +131,8 @@ body {
       display: block;
     }
 
-    .current a {
-      color: #000;
-      text-shadow: none;
+    a, a:link, a:visited {
+      color: $link-color;
     }
 
     .sheep {
@@ -181,10 +188,6 @@ body {
         font-weight: bold;
       }
 
-      a, a:link, a:visited {
-        color: $link-color;
-      }
-
       ul {
         text-align: left;
         margin: 0px;
@@ -224,16 +227,9 @@ body {
     @include container();
 //    @include susy-grid-background;
 
-    width: 800px;
-    margin: 0 auto;
-    min-height: 100%;
-    position: relative;
-    text-align: left;
-    box-shadow: 1px 1px 10px 1px #000;
-
     header {
       height: 193px;
-      background-image: image-url('water_tiles.png');
+//      background-image: image-url('water_tiles.png'); // removed for now as it does not line up
       background-repeat: repeat-x;
       text-align: center;
     }
@@ -247,14 +243,14 @@ body {
       background-repeat: no-repeat;
       position: absolute;
       top: 0px;
-      left: -250px;
+      left: -100px;
     }
 
     .background_tiles_right {
       display: block;
       position: absolute;
       top: 190px;
-      right: -100px;
+      right: 70px;
       height: 144px;
       width: 144px;
       background-image: image-url('tile_background_right.png');

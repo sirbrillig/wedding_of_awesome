@@ -1,9 +1,15 @@
 @import "susy";
 
+// Default Layout
 $total-columns  : 3;
 $column-width   : 4em;
-$gutter-width   : .5em;
-$grid-padding   : 0em;
+$gutter-width   : 1em;
+$grid-padding   : 1em;
+
+// Other Layout Breakpoints
+$smartphone: 290px 6;
+$desktop: 800px 14;
+
 
 $link-color: #114f57;
 $nav-link-size: 1.4em;
@@ -11,6 +17,7 @@ $second-row-offset: 64px;
 $fourth-row-offset: 40px;
 $third-row-offset: -22px;
 $fifth-row-offset: -44px;
+
 
 @mixin nav-link-center {
   position: absolute;
@@ -69,7 +76,8 @@ body {
   background-color: #fff;
   background-image: image-url('cardboard_flat.png');
 
-  @include at-breakpoint(290px 6) { // Medium display
+  // ############# iPhone/iPad Breakpoint #############
+  @include at-breakpoint($smartphone) {
     @include container();
 //    @include susy-grid-background;
 
@@ -211,7 +219,8 @@ body {
     }
   }
 
-  @include at-breakpoint(800px 14) { // Wide display
+  // ############# Desktop Breakpoint #############
+  @include at-breakpoint($desktop) {
     @include container();
 //    @include susy-grid-background;
 

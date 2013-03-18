@@ -24,6 +24,25 @@
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     .container
+      #mobile-header
+        #menu-button
+          <a title="menu" alt="menu" href="#">
+          <svg width="10" height="10">
+          <path d="M0,1 10,1" stroke="#fff" stroke-width="2"/>
+          <path d="M0,5 10,5" stroke="#fff" stroke-width="2"/>
+          <path d="M0,9 10,9" stroke="#fff" stroke-width="2"/>
+          </svg>
+          menu
+          </a>
+        %h3= link_to('Wedding of Awesome', '/')
+      #mobile-nav-panel
+        .mobile-nav-panel-links
+          .mobile-nav-panel-link= link_to('Where & When', '/where')
+          .mobile-nav-panel-link= link_to('Travel & Lodging', '/lodging')
+          .mobile-nav-panel-link= link_to('Gifts', '/gifts')
+          .mobile-nav-panel-link= link_to('RSVP', '/rsvp')
+          .mobile-nav-panel-link= link_to('Wedding Party', '/party')
+          .mobile-nav-panel-link= link_to('Contact Us', '/contact')
       %header
         .main-nav-links
           .nav-link.where_when_link{nav_active('where')}= link_to('Where & When', '/where')
@@ -43,10 +62,14 @@
       .background_tiles_left
       .background_tiles_right
     
-    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
     :javascript
-      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
+      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.9.1.js"><\/script>')
     = javascript_include_tag "site"
+    :javascript
+      $('#mobile-nav-panel').hide();
+      $('#menu-button').click(function() {
+        $('#mobile-nav-panel').slideToggle();
+      });
     
     :javascript
       var _gaq=[['_setAccount','UA-38831122-1'],['_trackPageview']];

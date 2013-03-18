@@ -1,9 +1,15 @@
 @import "susy";
 
+// Default Layout
 $total-columns  : 3;
 $column-width   : 4em;
-$gutter-width   : .5em;
-$grid-padding   : 0em;
+$gutter-width   : 1em;
+$grid-padding   : 1em;
+
+// Other Layout Breakpoints
+$smartphone: 290px 6;
+$desktop: 800px 14;
+
 
 $link-color: #114f57;
 $nav-link-size: 1.4em;
@@ -11,6 +17,29 @@ $second-row-offset: 64px;
 $fourth-row-offset: 40px;
 $third-row-offset: -22px;
 $fifth-row-offset: -44px;
+
+$mobile-header-gradient-start: #3f94bf;
+$mobile-header-gradient-end: #246485;
+$mobile-link-gradient-start: #fff;
+$mobile-link-gradient-end: #ededed;
+$mobile-link-border: #b7b7b7;
+$mobile-header-button-border: #222;
+$mobile-link-text: #000;
+$mobile-header-text: #fff;
+
+
+// Borrowed from: http://stackoverflow.com/questions/11223927/susy-how-to-extend-content-box-to-cover-grid-padding-as-well
+@mixin bleed($padding: $grid-padding, $sides: left right) {
+  @if $sides == 'all' {
+    margin: - $padding;
+    padding: $padding;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $padding;
+      padding-#{$side}: $padding;
+    }
+  }
+}
 
 @mixin nav-link-center {
   position: absolute;
@@ -23,7 +52,7 @@ $fifth-row-offset: -44px;
 @mixin nav-link-small {
   width: 108px;
   height: 98px;
-  a {
+  a, a:link, a:visited {
     font-size: 1em;
     width: 80px;
     left: 15px;
@@ -43,7 +72,7 @@ $fifth-row-offset: -44px;
   position: relative;
   top: $offset-from-top;
 
-  a {
+  a, a:link, a:visited {
     @include nav-link-center;
     color: #fff;
     text-decoration: none;
@@ -56,25 +85,56 @@ $fifth-row-offset: -44px;
   }
 }
 
+@mixin mobile-link-box($gradient-start: $mobile-link-gradient-start, $gradient-end: $mobile-link-gradient-end, $text-color: $mobile-link-text, $shadow-color: #222) {
+  color: $text-color;
+  display: block;
+  text-shadow: 0px -1px 1px $shadow-color;
+  background-image: -moz-linear-gradient(top, $gradient-start, $gradient-end);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $gradient-start), color-stop(1, $gradient-end));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$gradient-start', EndColorStr='$gradient-end')";
+  padding: .5em 2em .55em;
+  margin: 0px;
+  border-bottom: 1px solid $mobile-link-border;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.current {
+  a, a:link, a:visited {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+}
+
 body {
   text-align: center;
-  background-color: #b3a78f;
   height: 100%;
+  background-image: image-url('cardboard_flat.png') !important;
 }
 
 .container {
   @include container();
 //  @include susy-grid-background;
 
-  background-color: #fff;
-  background-image: image-url('cardboard_flat.png');
-
-  @include at-breakpoint(290px 6) { // Medium display
+  // ############# iPhone/iPad Breakpoint #############
+  @include at-breakpoint($smartphone) {
     @include container();
 //    @include susy-grid-background;
 
     .background_tiles_left { display: none; }
-    .background_tiles_right { display: none; }
+    .background_tiles_right {
+      display: block;
+      position: absolute;
+      top: 100px;
+      right: 1px;
+      width: 187px;
+      height: 428px;
+      background-image: image-url('small-background.png');
+      background-repeat: no-repeat;
+      z-index: -100;
+      opacity: 0.2;
+    }
+
 
     .main {
       margin: 0px;
@@ -82,14 +142,65 @@ body {
       text-align: center;
     }
 
+    #mobile-header {
+      @include mobile-link-box($mobile-header-gradient-start, $mobile-header-gradient-end, $mobile-header-text, #222);
+      box-shadow: 0 1px 5px rgba(34, 34, 34, 0.5);
+      border-bottom-color: #1b5572;
+      @include bleed;
+
+      #menu-button {
+        display: inline;
+        float: left;
+
+        a {
+          color: #fff;
+          border: 1px solid $mobile-header-button-border;
+          border-radius: .2em;
+          padding: .2em .5em;
+          background-image: -moz-linear-gradient(top, darken($mobile-header-gradient-start, 5%), darken($mobile-header-gradient-end, 5%));
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, darken($mobile-header-gradient-start, 5%)), color-stop(1, darken($mobile-header-gradient-end, 5%)));
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='darken($mobile-header-gradient-start, 5%)', EndColorStr='darken($mobile-header-gradient-end')";
+          text-decoration: none;
+          font-size: 0.9em;
+          font-weight: normal;
+        }
+      }
+
+      h3 {
+        display: inline;
+        font-size: 1em;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    #mobile-nav-panel {
+      background-color: #fff;
+      margin: 0px;
+      padding: 0px;
+      @include bleed;
+
+      .mobile-nav-panel-links {
+        margin: 0px;
+        padding: 0px;
+        border-left: 1px solid $mobile-link-border;
+        border-right: 1px solid $mobile-link-border;
+
+        a {
+          @include mobile-link-box($shadow-color: #fff);
+          @include bleed;
+        }
+      }
+    }
+
     .main-nav-links {
-      @include span-columns(2, 6);
-      @include pull(0.3);
+      display: none;
     }
 
     .title {
-      @include span-columns(4 omega, 6);
-
       h1 {
         text-align: center;
         margin-left: auto;
@@ -103,21 +214,12 @@ body {
       }
     }
 
-    .where_when_link { @include main-nav-link('wheat_small.png'); @include nav-link-small; }
-    .lodging_link { @include main-nav-link('forest_small.png'); @include nav-link-small; }
-    .registry_link { @include main-nav-link('mountains_small.png'); @include nav-link-small; }
-    .rsvp_link { @include main-nav-link('brick_small.png'); @include nav-link-small; }
-    .faq_link { @include main-nav-link('field_small.png'); @include nav-link-small; }
-    .party_link { @include main-nav-link('desert_small.png'); @include nav-link-small; }
-    .contact_link { @include main-nav-link('forest_small.png'); @include nav-link-small; }
-
     .nav-link {
-      display: block;
+      display: none;
     }
 
-    .current a {
-      color: #000;
-      text-shadow: none;
+    a, a:link, a:visited {
+      color: $link-color;
     }
 
     .sheep {
@@ -125,7 +227,6 @@ body {
     }
 
     .main_content {
-      @include span-columns(4 omega, 6);
       margin: 0px auto;
 
       h1.section-title {
@@ -173,10 +274,6 @@ body {
         font-weight: bold;
       }
 
-      a, a:link, a:visited {
-        color: $link-color;
-      }
-
       ul {
         text-align: left;
         margin: 0px;
@@ -211,20 +308,18 @@ body {
     }
   }
 
-  @include at-breakpoint(800px 14) { // Wide display
+  // ############# Desktop Breakpoint #############
+  @include at-breakpoint($desktop) {
     @include container();
 //    @include susy-grid-background;
 
-    width: 800px;
-    margin: 0 auto;
-    min-height: 100%;
-    position: relative;
-    text-align: left;
-    box-shadow: 1px 1px 10px 1px #000;
+    #mobile-header {
+      display: none;
+    }
 
     header {
       height: 193px;
-      background-image: image-url('water_tiles.png');
+//      background-image: image-url('water_tiles.png'); // removed for now as it does not line up
       background-repeat: repeat-x;
       text-align: center;
     }
@@ -238,18 +333,20 @@ body {
       background-repeat: no-repeat;
       position: absolute;
       top: 0px;
-      left: -250px;
+      left: -100px;
+      opacity: 0.5;
     }
 
     .background_tiles_right {
       display: block;
       position: absolute;
       top: 190px;
-      right: -100px;
+      right: 70px;
       height: 144px;
       width: 144px;
       background-image: image-url('tile_background_right.png');
       background-repeat: no-repeat;
+      opacity: 0.5;
     }
 
     .main {
@@ -267,6 +364,9 @@ body {
     }
 
     .main-nav-links {
+      display: block;
+      @include span-columns(2, 6);
+      @include pull(0.3);
       @include reset-columns;
     }
 

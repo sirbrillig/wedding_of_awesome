@@ -16,27 +16,52 @@
   <body>
     <!--[if lt IE 7]> <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p> <![endif]-->
     <div class='container'>
+      <div id='mobile-header'>
+        <div id='menu-button'>
+          <a title="menu" alt="menu" href="#">
+          <svg width="10" height="10">
+          <path d="M0,1 10,1" stroke="#fff" stroke-width="2"/>
+          <path d="M0,5 10,5" stroke="#fff" stroke-width="2"/>
+          <path d="M0,9 10,9" stroke="#fff" stroke-width="2"/>
+          </svg>
+          menu
+          </a>
+        </div>
+        <h3><a href="/">Wedding of Awesome</a></h3>
+      </div>
+      <div id='mobile-nav-panel'>
+        <div class='mobile-nav-panel-links'>
+          <div class='mobile-nav-panel-link'><a href="/where">Where & When</a></div>
+          <div class='mobile-nav-panel-link'><a href="/lodging">Travel & Lodging</a></div>
+          <div class='mobile-nav-panel-link'><a href="/gifts">Gifts</a></div>
+          <div class='mobile-nav-panel-link'><a href="/rsvp">RSVP</a></div>
+          <div class='mobile-nav-panel-link'><a href="/party">Wedding Party</a></div>
+          <div class='mobile-nav-panel-link'><a href="/contact">Contact Us</a></div>
+        </div>
+      </div>
       <header>
-        <div class='where_when_link'><a href="/where">Where & When</a></div>
-        <div class='lodging_link'><a href="/lodging">Travel & Lodging</a></div>
-        <div class='registry_link'><a href="/gifts">Gifts</a></div>
-        <div class='rsvp_link'><a href="/rsvp">RSVP</a></div>
-        <div class='faq_link'><a href="/faq">FAQ</a></div>
-        <div class='party_link'><a href="/party">Wedding Party</a></div>
-        <div class='contact_link current'><a href="/contact">Contact Us</a></div>
+        <div class='main-nav-links'>
+          <div class='nav-link where_when_link'><a href="/where">Where & When</a></div>
+          <div class='nav-link lodging_link'><a href="/lodging">Travel & Lodging</a></div>
+          <div class='nav-link registry_link'><a href="/gifts">Gifts</a></div>
+          <div class='nav-link rsvp_link'><a href="/rsvp">RSVP</a></div>
+          <div class='nav-link faq_link'><a href="/faq">FAQ</a></div>
+          <div class='nav-link party_link'><a href="/party">Wedding Party</a></div>
+          <div class='contact_link current nav-link'><a href="/contact">Contact Us</a></div>
+        </div>
         <div class='title'>
           <h1>Payton and Meg's Wedding of Awesome</h1>
         </div>
       </header>
       <div class='main' role='main'>
         <div class='main_content'>
-          <h1>Contact</h1>
+          <h1 class="section-title">Contact</h1>
           
           <p>Please send us an email if you have any questions, but check out the <a href="/faq">FAQ</a> first to make sure we haven&#39;t answered it already.</p>
           
           <p>If you would like to RSVP (one way or the other), please use the <a href="/rsvp">RSVP</a> page.</p>
           
-          <p>Emails about anything else can be directed to <a href="mailto:wedding@thisdog.net">wedding@thisdog.net</a></p>
+          <p>Emails about anything else can be directed to <a href="mailto:wedding@foolord.com">wedding@foolord.com</a></p>
           <div class='sheep'>
             <a href="/"><img src="/images/sheep_tile.png" /></a>
           </div>
@@ -44,20 +69,24 @@
       </div>
       <div class='background_tiles_left'></div>
       <div class='background_tiles_right'></div>
-      <footer>
-        <a href="/">Home</a>
-      </footer>
     </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
     <script type='text/javascript'>
       //<![CDATA[
-        window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
+        window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.9.1.js"><\/script>')
       //]]>
     </script>
     <script src="/javascripts/site.js" type="text/javascript"></script>
     <script type='text/javascript'>
       //<![CDATA[
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        $('#mobile-nav-panel').hide();
+        $('#menu-button').click(function() {
+          $('#mobile-nav-panel').slideToggle();
+        });
+      //]]>
+    </script>
+    <script type='text/javascript'>
+      //<![CDATA[
+        var _gaq=[['_setAccount','UA-38831122-1'],['_trackPageview']];
         (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
         g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
         s.parentNode.insertBefore(g,s)}(document,'script'));

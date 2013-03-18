@@ -18,6 +18,28 @@ $fourth-row-offset: 40px;
 $third-row-offset: -22px;
 $fifth-row-offset: -44px;
 
+$mobile-header-gradient-start: #3f94bf;
+$mobile-header-gradient-end: #246485;
+$mobile-link-gradient-start: #fff;
+$mobile-link-gradient-end: #ededed;
+$mobile-link-border: #b7b7b7;
+$mobile-header-button-border: #222;
+$mobile-link-text: #000;
+$mobile-header-text: #fff;
+
+
+// Borrowed from: http://stackoverflow.com/questions/11223927/susy-how-to-extend-content-box-to-cover-grid-padding-as-well
+@mixin bleed($padding: $grid-padding, $sides: left right) {
+  @if $sides == 'all' {
+    margin: - $padding;
+    padding: $padding;
+  } @else {
+    @each $side in $sides {
+      margin-#{$side}: - $padding;
+      padding-#{$side}: $padding;
+    }
+  }
+}
 
 @mixin nav-link-center {
   position: absolute;
@@ -61,7 +83,20 @@ $fifth-row-offset: -44px;
     width: 100px;
     text-shadow: 2px 2px #000;
   }
+}
 
+@mixin mobile-link-box($gradient-start: $mobile-link-gradient-start, $gradient-end: $mobile-link-gradient-end, $text-color: $mobile-link-text, $shadow-color: #222) {
+  color: $text-color;
+  display: block;
+  text-shadow: 0px -1px 1px $shadow-color;
+  background-image: -moz-linear-gradient(top, $gradient-start, $gradient-end);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $gradient-start), color-stop(1, $gradient-end));
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='$gradient-start', EndColorStr='$gradient-end')";
+  padding: .5em 2em .55em;
+  margin: 0px;
+  border-bottom: 1px solid $mobile-link-border;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
 .current {
@@ -95,14 +130,65 @@ body {
       text-align: center;
     }
 
+    #mobile-header {
+      @include mobile-link-box($mobile-header-gradient-start, $mobile-header-gradient-end, $mobile-header-text, #222);
+      box-shadow: 0 1px 5px rgba(34, 34, 34, 0.5);
+      border-bottom-color: #1b5572;
+      @include bleed;
+
+      #menu-button {
+        display: inline;
+        float: left;
+
+        a {
+          color: #fff;
+          border: 1px solid $mobile-header-button-border;
+          border-radius: .2em;
+          padding: .2em .5em;
+          background-image: -moz-linear-gradient(top, darken($mobile-header-gradient-start, 5%), darken($mobile-header-gradient-end, 5%));
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, darken($mobile-header-gradient-start, 5%)), color-stop(1, darken($mobile-header-gradient-end, 5%)));
+          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='darken($mobile-header-gradient-start, 5%)', EndColorStr='darken($mobile-header-gradient-end')";
+          text-decoration: none;
+          font-size: 0.9em;
+          font-weight: normal;
+        }
+      }
+
+      h3 {
+        display: inline;
+        font-size: 1em;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+
+    #mobile-nav-panel {
+      background-color: #fff;
+      margin: 0px;
+      padding: 0px;
+      @include bleed;
+
+      .mobile-nav-panel-links {
+        margin: 0px;
+        padding: 0px;
+        border-left: 1px solid $mobile-link-border;
+        border-right: 1px solid $mobile-link-border;
+
+        a {
+          @include mobile-link-box($shadow-color: #fff);
+          @include bleed;
+        }
+      }
+    }
+
     .main-nav-links {
-      @include span-columns(2, 6);
-      @include pull(0.3);
+      display: none;
     }
 
     .title {
-      @include span-columns(4 omega, 6);
-
       h1 {
         text-align: center;
         margin-left: auto;
@@ -116,16 +202,8 @@ body {
       }
     }
 
-    .where_when_link { @include main-nav-link('wheat_small.png'); @include nav-link-small; }
-    .lodging_link { @include main-nav-link('forest_small.png'); @include nav-link-small; }
-    .registry_link { @include main-nav-link('mountains_small.png'); @include nav-link-small; }
-    .rsvp_link { @include main-nav-link('brick_small.png'); @include nav-link-small; }
-    .faq_link { @include main-nav-link('field_small.png'); @include nav-link-small; }
-    .party_link { @include main-nav-link('desert_small.png'); @include nav-link-small; }
-    .contact_link { @include main-nav-link('forest_small.png'); @include nav-link-small; }
-
     .nav-link {
-      display: block;
+      display: none;
     }
 
     a, a:link, a:visited {
@@ -137,7 +215,6 @@ body {
     }
 
     .main_content {
-      @include span-columns(4 omega, 6);
       margin: 0px auto;
 
       h1.section-title {
@@ -224,6 +301,10 @@ body {
     @include container();
 //    @include susy-grid-background;
 
+    #mobile-header {
+      display: none;
+    }
+
     header {
       height: 193px;
 //      background-image: image-url('water_tiles.png'); // removed for now as it does not line up
@@ -269,6 +350,9 @@ body {
     }
 
     .main-nav-links {
+      display: block;
+      @include span-columns(2, 6);
+      @include pull(0.3);
       @include reset-columns;
     }
 

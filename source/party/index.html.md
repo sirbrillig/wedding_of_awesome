@@ -56,8 +56,6 @@
 
 ---
 
----
-
 <div class="party_person">
 
 <span><em>Name:</em> Kat Winter-Lewis</span>

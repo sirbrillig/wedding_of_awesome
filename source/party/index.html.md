@@ -55,3 +55,19 @@
 </div>
 
 ---
+
+---
+
+<div class="party_person">
+
+<span><em>Name:</em> Kat Winter-Lewis</span>
+<span><em>Alias:</em> The one standing there awkwardly</span>
+<span><em>Weapon of Choice:</em> Intense Focus</span>
+<span><em>Favorite Game:</em> Spades</span>
+<span><em>Superpower:</em> Kitty Whisperer</span>
+<span><em>Fears:</em> Fire, Running out of food</span>
+<span><em>Loves:</em> Food, Coffee, Dogs, Cats</span>
+
+</div>
+
+---
